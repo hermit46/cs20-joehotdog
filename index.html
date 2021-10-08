@@ -15,6 +15,9 @@
 
 
 <body>
+    <div class = "header">
+        !!Welcome to Joe's Hotdogs!! <p></p>
+    </div>
 
     <script language = 'javascript' async>
         // Array of hotdogs, fries, and drinks
@@ -34,6 +37,10 @@
         function roundTwoDigits (num) {
             return (Math.round(num * 100) / 100).toFixed(2)
         }
+
+        function toggleVisibility(el) {
+        el.classList.toggle('hidden');
+      }
 
         // Taking in the orders
         for(i = 0; i < 3; i++) {
@@ -68,18 +75,20 @@
         total = roundTwoDigits(subtotal)
         document.write("<div id = 'jstext' >" + "Your total cost (after 6.25% tax) will be: $" + total + "<br /> </div>");
 
-        // const table = [
-        //     food_type[0], food[0], roundTwoDigits(food[0]*food_cost[0]),
-        //     food_type[1], food[1], roundTwoDigits(food[1]*food_cost[1]),
-        //     food_type[2], food[2], roundTwoDigits(food[2]*food_cost[2]),
-        //     "Subtotal", "", roundTwoDigits(subtotal),
-        //     "Tax", "", roundTwoDigits(tax),
-        //     "Total", "", roundTwoDigits(total)
-        // ];
-        
+        document.write("<div id = 'jstext' >" + "Thanks for coming to Joe's Hotdogs! And remember, don't forget.....</div>")
+
+        function setImageVisible(id, visible) {
+            var img = document.getElementById(id);
+            img.style.visibility = (visible ? 'visible' : 'hidden');
+        }
     </script>
 
-Photo by <a href="https://unsplash.com/@jessicaloaizar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jessica Loaiza</a> on <a href="https://unsplash.com/s/photos/hotdog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    <div id = "joke"> <img src = "joe-hotdog.jpeg">  </div>
+
+    <a href="javascript:setImageVisible('joke', true)">show image</a>
+    <a href="javascript:setImageVisible('joke', false)">hide image</a>
+
+<p></p>Photo by <a href="https://unsplash.com/@jessicaloaizar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jessica Loaiza</a> on <a href="https://unsplash.com/s/photos/hotdog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
     
 </body>

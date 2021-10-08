@@ -35,7 +35,7 @@
         ];
         
         function roundTwoDigits (num) {
-            return (Math.round(num * 100) / 100).toFixed(2)
+            return num.toFixed(2)
         }
 
         function toggleVisibility(el) {
@@ -73,7 +73,7 @@
         
         subtotal *= 1.0625;
         total = roundTwoDigits(subtotal)
-        document.write("<div id = 'jstext' >" + "Your total cost (after 6.25% tax) will be: $" + total + "<br /> </div>");
+        document.write("<div id = 'jstext' >" + "Your total cost (after 6.25% tax) will be: $" + total + "<p /> </div>");
 
         document.write("<div id = 'jstext' >" + "Thanks for coming to Joe's Hotdogs! And remember, don't forget.....</div>")
 
